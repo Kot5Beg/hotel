@@ -19,8 +19,22 @@ namespace Hotel
 
         private void button1_Click(object sender, EventArgs e)
         {
-            worker w = new worker();
-            w.Show();
+            if(textBox1.Text == "admin" && textBox2.Text == "admin")
+            {
+                admin a = new admin();
+                a.Show();
+                Hide();
+            }
+            else if(textBox1.Text == "worker" && textBox2.Text == "worker")
+            {
+                worker w = new worker();
+                w.Show();
+            }
+            else
+            {
+                MessageBox.Show("Проверьте правильность введённых данных!");
+                Focus();
+            }
         }
     }
 }
