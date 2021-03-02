@@ -18,6 +18,7 @@ namespace Hotel
         {
             InitializeComponent();
             Loading("SELECT * FROM clients", dataGridView1);
+            LoadCombo();
         }
 
         public static void Loading(string query, DataGridView grid)
@@ -183,6 +184,19 @@ namespace Hotel
             {
                 MessageBox.Show("Ошибка удаления");
             }
+        }
+
+        private void LoadCombo()
+        {
+            database.OpenCon();
+            SqlCommand sc2 = new SqlCommand("SELECT * FROM category", database.Con);
+            DataTable dt2 = new DataTable();
+            SqlDataAdapter da2 = new SqlDataAdapter(sc2);
+            da2.Fill(dt2);
+            comboBox1.DataSource = dt2;
+            comboBox1.DisplayMember = "rating";
+            comboBox1.ValueMember = "ID";
+            database.CloseConnection();
         }
     }
 }

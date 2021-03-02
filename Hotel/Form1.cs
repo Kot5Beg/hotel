@@ -23,17 +23,17 @@ namespace Hotel
             {
                 admin a = new admin();
                 a.Show();
-                Hide();
+                this.Hide();
             }
             else if(textBox1.Text == "worker" && textBox2.Text == "worker")
             {
                 worker w = new worker();
                 w.Show();
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("Проверьте правильность введённых данных!");
-                Focus();
             }
         }
     }
