@@ -116,5 +116,53 @@ namespace Hotel
                 checkBox2.Enabled = true;
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Вы точно хотите удалить запсиь?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                database.OpenCon();
+                var num = (int)dataGridView1.CurrentRow.Cells["ID"].Value;
+                SqlCommand sc = new SqlCommand(String.Format("DELETE FROM worker WHERE ID = {0}", num), database.Con);
+                sc.ExecuteNonQuery();
+                database.CloseConnection();
+            }
+            else
+            {
+                MessageBox.Show("Ошибка удаления");
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Вы точно хотите удалить запсиь?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                database.OpenCon();
+                var num = (int)dataGridView2.CurrentRow.Cells["ID"].Value;
+                SqlCommand sc = new SqlCommand(String.Format("DELETE FROM numbers WHERE ID = {0}", num), database.Con);
+                sc.ExecuteNonQuery();
+                database.CloseConnection();
+            }
+            else
+            {
+                MessageBox.Show("Ошибка удаления");
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Вы точно хотите удалить запсиь?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                database.OpenCon();
+                var num = (int)dataGridView4.CurrentRow.Cells["ID"].Value;
+                SqlCommand sc = new SqlCommand(String.Format("DELETE FROM category WHERE ID = {0}", num), database.Con);
+                sc.ExecuteNonQuery();
+                database.CloseConnection();
+            }
+            else
+            {
+                MessageBox.Show("Ошибка удаления");
+            }
+        }
     }
 }

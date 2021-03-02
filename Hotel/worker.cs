@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Hotel
 {
@@ -133,6 +134,54 @@ namespace Hotel
                 string client = "SELECT * FROM numbers";
                 Loading(client, dataGridView2);
                 checkBox4.Enabled = true;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Вы точно хотите удалить запсиь?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                database.OpenCon();
+                var num = (int)dataGridView1.CurrentRow.Cells["ID"].Value;
+                SqlCommand sc = new SqlCommand(String.Format("DELETE FROM clients WHERE ID = {0}", num), database.Con);
+                sc.ExecuteNonQuery();
+                database.CloseConnection();
+            }
+            else
+            {
+                MessageBox.Show("Ошибка удаления");
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Вы точно хотите удалить запсиь?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                database.OpenCon();
+                var num = (int)dataGridView3.CurrentRow.Cells["ID"].Value;
+                SqlCommand sc = new SqlCommand(String.Format("DELETE FROM money WHERE ID = {0}", num), database.Con);
+                sc.ExecuteNonQuery();
+                database.CloseConnection();
+            }
+            else
+            {
+                MessageBox.Show("Ошибка удаления");
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Вы точно хотите удалить запсиь?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                database.OpenCon();
+                var num = (int)dataGridView4.CurrentRow.Cells["ID"].Value;
+                SqlCommand sc = new SqlCommand(String.Format("DELETE FROM wish WHERE ID = {0}", num), database.Con);
+                sc.ExecuteNonQuery();
+                database.CloseConnection();
+            }
+            else
+            {
+                MessageBox.Show("Ошибка удаления");
             }
         }
     }
