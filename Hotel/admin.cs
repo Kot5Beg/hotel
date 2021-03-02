@@ -50,5 +50,71 @@ namespace Hotel
                 Loading(type, dataGridView4);
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string worker = "SELECT * FROM worker WHERE CONCAT (ID_Category, Surname, Name, Patronymic, Address, Phone, Email, Date_of_birth, Gender) LIKE '%" + textBox1.Text + "%' ";
+            Loading(worker, dataGridView1);
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            string worker = "SELECT * FROM numbers WHERE CONCAT (ID_Category, Price_Day, Quantity) LIKE '%" + textBox2.Text + "%' ";
+            Loading(worker, dataGridView2);
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                string client = "SELECT * FROM worker ORDER BY Name ASC";
+                Loading(client, dataGridView1);
+                checkBox2.Enabled = false;
+                checkBox3.Enabled = false;
+            }
+            else if (checkBox1.Checked == false)
+            {
+                string client = "SELECT * FROM worker";
+                Loading(client, dataGridView1);
+                checkBox2.Enabled = true;
+                checkBox3.Enabled = true;
+            }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked == true)
+            {
+                string client = "SELECT * FROM worker ORDER BY Patronymic ASC";
+                Loading(client, dataGridView1);
+                checkBox1.Enabled = false;
+                checkBox3.Enabled = false;
+            }
+            else if (checkBox2.Checked == false)
+            {
+                string client = "SELECT * FROM worker";
+                Loading(client, dataGridView1);
+                checkBox1.Enabled = true;
+                checkBox3.Enabled = true;
+            }
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked == true)
+            {
+                string client = "SELECT * FROM worker ORDER BY Surname ASC";
+                Loading(client, dataGridView1);
+                checkBox1.Enabled = false;
+                checkBox2.Enabled = false;
+            }
+            else if (checkBox3.Checked == false)
+            {
+                string client = "SELECT * FROM worker";
+                Loading(client, dataGridView1);
+                checkBox1.Enabled = true;
+                checkBox2.Enabled = true;
+            }
+        }
     }
 }

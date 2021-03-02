@@ -202,6 +202,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(197, 26);
             this.textBox1.TabIndex = 7;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // checkBox1
             // 
@@ -212,6 +213,7 @@
             this.checkBox1.TabIndex = 8;
             this.checkBox1.Text = "по имени";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox2
             // 
@@ -222,6 +224,7 @@
             this.checkBox2.TabIndex = 9;
             this.checkBox2.Text = "по отчеству";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox3
             // 
@@ -232,6 +235,7 @@
             this.checkBox3.TabIndex = 10;
             this.checkBox3.Text = "по фамилии";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // label2
             // 
@@ -301,6 +305,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(197, 26);
             this.textBox2.TabIndex = 11;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // dataGridView3
             // 

@@ -131,6 +131,7 @@
             this.checkBox3.TabIndex = 8;
             this.checkBox3.Text = "по отчеству";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // checkBox2
             // 
@@ -141,6 +142,7 @@
             this.checkBox2.TabIndex = 7;
             this.checkBox2.Text = "по имени";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox1
             // 
@@ -151,6 +153,7 @@
             this.checkBox1.TabIndex = 6;
             this.checkBox1.Text = "по фамилии";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // button4
             // 
@@ -240,6 +243,7 @@
             this.checkBox5.TabIndex = 7;
             this.checkBox5.Text = "по количеству мест";
             this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
             // 
             // checkBox4
             // 
@@ -250,6 +254,7 @@
             this.checkBox4.TabIndex = 6;
             this.checkBox4.Text = "по цене";
             this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // button5
             // 

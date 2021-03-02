@@ -49,5 +49,91 @@ namespace Hotel
                 Loading(type, dataGridView4);
             }
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                string client = "SELECT * FROM clients ORDER BY Surname ASC";
+                Loading(client, dataGridView1);
+                checkBox3.Enabled = false;
+                checkBox2.Enabled = false;
+            }
+            else if (checkBox1.Checked == false)
+            {
+                string client = "SELECT * FROM clients";
+                Loading(client, dataGridView1);
+                checkBox3.Enabled = true;
+                checkBox2.Enabled = true;
+            }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked == true)
+            {
+                string client = "SELECT * FROM clients ORDER BY Name ASC";
+                Loading(client, dataGridView1);
+                checkBox1.Enabled = false;
+                checkBox3.Enabled = false;
+            }
+            else if (checkBox2.Checked == false)
+            {
+                string client = "SELECT * FROM clients";
+                Loading(client, dataGridView1);
+                checkBox1.Enabled = true;
+                checkBox3.Enabled = true;
+            }
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked == true)
+            {
+                string client = "SELECT * FROM clients ORDER BY Patronymic ASC";
+                Loading(client, dataGridView1);
+                checkBox1.Enabled = false;
+                checkBox2.Enabled = false;
+            }
+            else if (checkBox3.Checked == false)
+            {
+                string client = "SELECT * FROM clients";
+                Loading(client, dataGridView1);
+                checkBox1.Enabled = true;
+                checkBox2.Enabled = true;
+            }
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox4.Checked == true)
+            {
+                string client = "SELECT * FROM numbers ORDER BY Price_Day ASC";
+                Loading(client, dataGridView2);
+                checkBox5.Enabled = false;
+            }
+            else if (checkBox4.Checked == false)
+            {
+                string client = "SELECT * FROM numbers";
+                Loading(client, dataGridView2);
+                checkBox5.Enabled = true;
+            }
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox5.Checked == true)
+            {
+                string client = "SELECT * FROM numbers ORDER BY Quantity ASC";
+                Loading(client, dataGridView2);
+                checkBox4.Enabled = false;
+            }
+            else if (checkBox4.Checked == false)
+            {
+                string client = "SELECT * FROM numbers";
+                Loading(client, dataGridView2);
+                checkBox4.Enabled = true;
+            }
+        }
     }
 }
