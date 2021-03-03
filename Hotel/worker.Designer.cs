@@ -167,6 +167,7 @@
             this.button4.TabIndex = 5;
             this.button4.Text = "Обновить";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -337,6 +338,7 @@
             this.button10.TabIndex = 8;
             this.button10.Text = "Обновить";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -397,6 +399,7 @@
             this.button9.TabIndex = 4;
             this.button9.Text = "Обновить";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 

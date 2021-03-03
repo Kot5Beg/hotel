@@ -233,5 +233,23 @@ namespace Hotel
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string client = "SELECT * FROM clients";
+            Loading(client, dataGridView1);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            string client = "SELECT * FROM money";
+            Loading(client, dataGridView3);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            string client = "SELECT * FROM wish";
+            Loading(client, dataGridView4);
+        }
     }
 }
