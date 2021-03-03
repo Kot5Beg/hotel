@@ -208,7 +208,7 @@ namespace Hotel
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
-            n = comboBox1.SelectedValue.ToString();
+            //n = comboBox1.SelectedValue.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)

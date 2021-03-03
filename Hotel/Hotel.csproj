@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="add_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_category.Designer.cs">
+      <DependentUpon>add_category.cs</DependentUpon>
+    </Compile>
     <Compile Include="add_client.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,11 +65,23 @@
     <Compile Include="add_money.Designer.cs">
       <DependentUpon>add_money.cs</DependentUpon>
     </Compile>
+    <Compile Include="add_number.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_number.Designer.cs">
+      <DependentUpon>add_number.cs</DependentUpon>
+    </Compile>
     <Compile Include="add_wish.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="add_wish.Designer.cs">
       <DependentUpon>add_wish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_worker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_worker.Designer.cs">
+      <DependentUpon>add_worker.cs</DependentUpon>
     </Compile>
     <Compile Include="admin.cs">
       <SubType>Form</SubType>
@@ -86,14 +104,23 @@
     <Compile Include="worker.Designer.cs">
       <DependentUpon>worker.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="add_category.resx">
+      <DependentUpon>add_category.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="add_client.resx">
       <DependentUpon>add_client.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="add_money.resx">
       <DependentUpon>add_money.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="add_number.resx">
+      <DependentUpon>add_number.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="add_wish.resx">
       <DependentUpon>add_wish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_worker.resx">
+      <DependentUpon>add_worker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="admin.resx">
       <DependentUpon>admin.cs</DependentUpon>
