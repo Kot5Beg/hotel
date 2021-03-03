@@ -197,6 +197,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Добавить";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView1
             // 
@@ -276,6 +277,7 @@
             this.button8.TabIndex = 6;
             this.button8.Text = "Добавить";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // dataGridView2
             // 
@@ -353,6 +355,7 @@
             this.button12.TabIndex = 10;
             this.button12.Text = "Добавить";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // dataGridView4
             // 

@@ -31,7 +31,7 @@ namespace Hotel
         {
             if (tabControl1.SelectedTab == worker)
             {
-                string client = "SELECT * FROM clients";
+                string client = "SELECT * FROM worker";
                 Loading(client, dataGridView1);
             }
             else if (tabControl1.SelectedTab == numbers)
@@ -53,7 +53,7 @@ namespace Hotel
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string worker = "SELECT * FROM worker WHERE CONCAT (ID_Category, Surname, Name, Patronymic, Address, Phone, Email, Date_of_birth, Gender) LIKE '%" + textBox1.Text + "%' ";
+            string worker = "SELECT * FROM worker WHERE CONCAT (Surname, Name, Patronymic, Address, Phone, Email, Date_of_birth) LIKE '%" + textBox1.Text + "%' ";
             Loading(worker, dataGridView1);
         }
 
@@ -163,6 +163,24 @@ namespace Hotel
             {
                 MessageBox.Show("Ошибка удаления");
             }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            add_category ac = new add_category();
+            ac.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            add_number an = new add_number();
+            an.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            add_worker aw = new add_worker();
+            aw.Show();
         }
     }
 }

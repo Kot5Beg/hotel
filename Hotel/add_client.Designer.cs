@@ -42,9 +42,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -162,17 +160,6 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(249, 26);
             this.dateTimePicker1.TabIndex = 13;
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "м",
-            "ж"});
-            this.comboBox2.Location = new System.Drawing.Point(141, 285);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(249, 30);
-            this.comboBox2.TabIndex = 14;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -182,33 +169,23 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Дата рождения";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 288);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 22);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Пол";
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(141, 334);
+            this.button1.Location = new System.Drawing.Point(141, 286);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 40);
             this.button1.TabIndex = 17;
             this.button1.Text = "Добавить";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // add_client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(402, 386);
+            this.ClientSize = new System.Drawing.Size(402, 338);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -248,9 +225,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button1;
     }
 }

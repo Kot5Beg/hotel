@@ -208,7 +208,7 @@ namespace Hotel
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
-            //n = comboBox1.SelectedValue.ToString();
+            n = comboBox1.SelectedValue.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -227,6 +227,11 @@ namespace Hotel
         {
             add_wish aw = new add_wish();
             aw.Show();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
