@@ -14,6 +14,7 @@ namespace Hotel
     public partial class worker : Form
     {
         public static DataTable res;
+        string n;
         public worker()
         {
             InitializeComponent();
@@ -197,6 +198,35 @@ namespace Hotel
             comboBox1.DisplayMember = "rating";
             comboBox1.ValueMember = "ID";
             database.CloseConnection();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string filter = "SELECT * FROM numbers WHERE ID_Category = '" + n + "'";
+            Loading(filter, dataGridView2);
+        }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            n = comboBox1.SelectedValue.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            add_client ac = new add_client();
+            ac.Show();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            add_money am = new add_money();
+            am.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            add_wish aw = new add_wish();
+            aw.Show();
         }
     }
 }

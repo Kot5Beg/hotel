@@ -52,6 +52,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.money = new System.Windows.Forms.TabPage();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.wish = new System.Windows.Forms.TabPage();
             this.button9 = new System.Windows.Forms.Button();
@@ -59,10 +63,6 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.clients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -195,6 +195,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Добавить";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -269,6 +270,7 @@
             this.button5.TabIndex = 5;
             this.button5.Text = "Выбрать";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // comboBox1
             // 
@@ -277,6 +279,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(191, 30);
             this.comboBox1.TabIndex = 4;
+            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             // 
             // label4
             // 
@@ -324,6 +327,44 @@
             this.money.TabIndex = 2;
             this.money.Text = "Оплата";
             this.money.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(579, 374);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(193, 33);
+            this.button10.TabIndex = 8;
+            this.button10.Text = "Обновить";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(579, 335);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(193, 33);
+            this.button11.TabIndex = 7;
+            this.button11.Text = "Удалить";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(579, 296);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(193, 33);
+            this.button12.TabIndex = 6;
+            this.button12.Text = "Изменить";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(579, 257);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(193, 33);
+            this.button13.TabIndex = 5;
+            this.button13.Text = "Добавить";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // dataGridView3
             // 
@@ -383,6 +424,7 @@
             this.button6.TabIndex = 1;
             this.button6.Text = "Добавить";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // dataGridView4
             // 
@@ -391,43 +433,6 @@
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.Size = new System.Drawing.Size(573, 419);
             this.dataGridView4.TabIndex = 0;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(579, 374);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(193, 33);
-            this.button10.TabIndex = 8;
-            this.button10.Text = "Обновить";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(579, 335);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(193, 33);
-            this.button11.TabIndex = 7;
-            this.button11.Text = "Удалить";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(579, 296);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(193, 33);
-            this.button12.TabIndex = 6;
-            this.button12.Text = "Изменить";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(579, 257);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(193, 33);
-            this.button13.TabIndex = 5;
-            this.button13.Text = "Добавить";
-            this.button13.UseVisualStyleBackColor = true;
             // 
             // worker
             // 
