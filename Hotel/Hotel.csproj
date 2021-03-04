@@ -110,12 +110,6 @@
     <Compile Include="upd_client.Designer.cs">
       <DependentUpon>upd_client.cs</DependentUpon>
     </Compile>
-    <Compile Include="upd_money.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="upd_money.Designer.cs">
-      <DependentUpon>upd_money.cs</DependentUpon>
-    </Compile>
     <Compile Include="upd_number.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,12 +121,6 @@
     </Compile>
     <Compile Include="upd_worker.Designer.cs">
       <DependentUpon>upd_worker.cs</DependentUpon>
-    </Compile>
-    <Compile Include="wish.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="wish.Designer.cs">
-      <DependentUpon>wish.cs</DependentUpon>
     </Compile>
     <Compile Include="worker.cs">
       <SubType>Form</SubType>
@@ -179,17 +167,11 @@
     <EmbeddedResource Include="upd_client.resx">
       <DependentUpon>upd_client.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="upd_money.resx">
-      <DependentUpon>upd_money.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="upd_number.resx">
       <DependentUpon>upd_number.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="upd_worker.resx">
       <DependentUpon>upd_worker.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="wish.resx">
-      <DependentUpon>wish.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="worker.resx">
       <DependentUpon>worker.cs</DependentUpon>

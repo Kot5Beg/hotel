@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.clients = new System.Windows.Forms.TabPage();
+            this.button14 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
@@ -52,18 +53,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.money = new System.Windows.Forms.TabPage();
-            this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.wish = new System.Windows.Forms.TabPage();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.button14 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.clients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -81,10 +78,10 @@
             this.tabControl1.Controls.Add(this.numbers);
             this.tabControl1.Controls.Add(this.money);
             this.tabControl1.Controls.Add(this.wish);
-            this.tabControl1.Location = new System.Drawing.Point(-1, -2);
+            this.tabControl1.Location = new System.Drawing.Point(-1, -1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(788, 454);
+            this.tabControl1.Size = new System.Drawing.Size(788, 453);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
@@ -105,10 +102,20 @@
             this.clients.Location = new System.Drawing.Point(4, 31);
             this.clients.Name = "clients";
             this.clients.Padding = new System.Windows.Forms.Padding(3);
-            this.clients.Size = new System.Drawing.Size(780, 419);
+            this.clients.Size = new System.Drawing.Size(780, 418);
             this.clients.TabIndex = 0;
             this.clients.Text = "Клиенты";
             this.clients.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(588, 187);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(184, 37);
+            this.button14.TabIndex = 11;
+            this.button14.Text = "Импорт в Excel";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // label2
             // 
@@ -230,7 +237,7 @@
             this.numbers.Location = new System.Drawing.Point(4, 31);
             this.numbers.Name = "numbers";
             this.numbers.Padding = new System.Windows.Forms.Padding(3);
-            this.numbers.Size = new System.Drawing.Size(780, 419);
+            this.numbers.Size = new System.Drawing.Size(780, 418);
             this.numbers.TabIndex = 1;
             this.numbers.Text = "Номера";
             this.numbers.UseVisualStyleBackColor = true;
@@ -321,31 +328,19 @@
             // 
             // money
             // 
-            this.money.Controls.Add(this.button10);
             this.money.Controls.Add(this.button11);
-            this.money.Controls.Add(this.button12);
             this.money.Controls.Add(this.button13);
             this.money.Controls.Add(this.dataGridView3);
             this.money.Location = new System.Drawing.Point(4, 31);
             this.money.Name = "money";
-            this.money.Size = new System.Drawing.Size(780, 419);
+            this.money.Size = new System.Drawing.Size(780, 418);
             this.money.TabIndex = 2;
             this.money.Text = "Оплата";
             this.money.UseVisualStyleBackColor = true;
             // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(579, 374);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(193, 33);
-            this.button10.TabIndex = 8;
-            this.button10.Text = "Обновить";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(579, 335);
+            this.button11.Location = new System.Drawing.Point(576, 380);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(193, 33);
             this.button11.TabIndex = 7;
@@ -353,18 +348,9 @@
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(579, 296);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(193, 33);
-            this.button12.TabIndex = 6;
-            this.button12.Text = "Изменить";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(579, 257);
+            this.button13.Location = new System.Drawing.Point(576, 341);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(193, 33);
             this.button13.TabIndex = 5;
@@ -384,12 +370,11 @@
             // 
             this.wish.Controls.Add(this.button9);
             this.wish.Controls.Add(this.button8);
-            this.wish.Controls.Add(this.button7);
             this.wish.Controls.Add(this.button6);
             this.wish.Controls.Add(this.dataGridView4);
             this.wish.Location = new System.Drawing.Point(4, 31);
             this.wish.Name = "wish";
-            this.wish.Size = new System.Drawing.Size(780, 419);
+            this.wish.Size = new System.Drawing.Size(780, 418);
             this.wish.TabIndex = 3;
             this.wish.Text = "Пожелания";
             this.wish.UseVisualStyleBackColor = true;
@@ -414,18 +399,9 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(579, 299);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(193, 33);
-            this.button7.TabIndex = 2;
-            this.button7.Text = "Изменить";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(579, 260);
+            this.button6.Location = new System.Drawing.Point(579, 299);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(193, 33);
             this.button6.TabIndex = 1;
@@ -440,16 +416,6 @@
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.Size = new System.Drawing.Size(573, 419);
             this.dataGridView4.TabIndex = 0;
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(588, 187);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(184, 37);
-            this.button14.TabIndex = 11;
-            this.button14.Text = "Импорт в Excel";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // worker
             // 
@@ -507,11 +473,8 @@
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
     }

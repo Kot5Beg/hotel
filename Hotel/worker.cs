@@ -148,6 +148,7 @@ namespace Hotel
                 var num = (int)dataGridView1.CurrentRow.Cells["ID"].Value;
                 SqlCommand sc = new SqlCommand(String.Format("DELETE FROM clients WHERE ID = {0}", num), database.Con);
                 sc.ExecuteNonQuery();
+                MessageBox.Show("Запись удалена");
                 database.CloseConnection();
             }
             else
@@ -274,8 +275,18 @@ namespace Hotel
 
         private void button2_Click(object sender, EventArgs e)
         {
-            upd_client uc = new upd_client();
-            uc.Show();
+            List<string> manager = new List<string>();
+            var number = dataGridView1.CurrentCell.RowIndex;
+            DataGridViewRow row = dataGridView1.Rows[number];
+            upd_client uw = new upd_client(row.Cells[0].Value.ToString(),
+                row.Cells[1].Value.ToString(),
+                row.Cells[2].Value.ToString(),
+                row.Cells[3].Value.ToString(),
+                row.Cells[4].Value.ToString(),
+                row.Cells[5].Value.ToString(),
+                row.Cells[6].Value.ToString(),
+                row.Cells[7].Value.ToString());
+            uw.ShowDialog();
         }
     }
 }
