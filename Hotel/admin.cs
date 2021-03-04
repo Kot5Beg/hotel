@@ -182,5 +182,61 @@ namespace Hotel
             add_worker aw = new add_worker();
             aw.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            List<string> manager = new List<string>();
+            var number = dataGridView1.CurrentCell.RowIndex;
+            DataGridViewRow row = dataGridView1.Rows[number];
+            upd_worker uw = new upd_worker(row.Cells[0].Value.ToString(),
+                row.Cells[1].Value.ToString(),
+                row.Cells[2].Value.ToString(),
+                row.Cells[3].Value.ToString(),
+                row.Cells[4].Value.ToString(),
+                row.Cells[5].Value.ToString(),
+                row.Cells[6].Value.ToString(),
+                row.Cells[7].Value.ToString());
+            uw.ShowDialog();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            List<string> manager = new List<string>();
+            var number = dataGridView4.CurrentCell.RowIndex;
+            DataGridViewRow row = dataGridView4.Rows[number];
+            upd_category uc = new upd_category(row.Cells[0].Value.ToString(),
+                row.Cells[1].Value.ToString());
+            uc.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            List<string> manager = new List<string>();
+            var number = dataGridView2.CurrentCell.RowIndex;
+            DataGridViewRow row = dataGridView2.Rows[number];
+            upd_number un = new upd_number(row.Cells[0].Value.ToString(),
+                row.Cells[1].Value.ToString(),
+                row.Cells[2].Value.ToString(),
+                row.Cells[3].Value.ToString());
+            un.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string client = "SELECT * FROM worker";
+            Loading(client, dataGridView1);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string product = "SELECT * FROM numbers";
+            Loading(product, dataGridView2);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            string type = "SELECT * FROM category";
+            Loading(type, dataGridView4);
+        }
     }
 }

@@ -63,6 +63,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.button14 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.clients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -89,6 +90,7 @@
             // 
             // clients
             // 
+            this.clients.Controls.Add(this.button14);
             this.clients.Controls.Add(this.label2);
             this.clients.Controls.Add(this.label1);
             this.clients.Controls.Add(this.checkBox3);
@@ -111,7 +113,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(652, 4);
+            this.label2.Location = new System.Drawing.Point(652, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 22);
             this.label2.TabIndex = 10;
@@ -120,7 +122,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(584, 84);
+            this.label1.Location = new System.Drawing.Point(584, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 22);
             this.label1.TabIndex = 9;
@@ -129,7 +131,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(588, 173);
+            this.checkBox3.Location = new System.Drawing.Point(588, 155);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(116, 26);
             this.checkBox3.TabIndex = 8;
@@ -140,7 +142,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(588, 141);
+            this.checkBox2.Location = new System.Drawing.Point(588, 123);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(97, 26);
             this.checkBox2.TabIndex = 7;
@@ -151,7 +153,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(588, 109);
+            this.checkBox1.Location = new System.Drawing.Point(588, 91);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(118, 26);
             this.checkBox1.TabIndex = 6;
@@ -187,6 +189,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Изменить";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -200,7 +203,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(588, 29);
+            this.textBox1.Location = new System.Drawing.Point(588, 25);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(184, 26);
             this.textBox1.TabIndex = 1;
@@ -438,6 +441,16 @@
             this.dataGridView4.Size = new System.Drawing.Size(573, 419);
             this.dataGridView4.TabIndex = 0;
             // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(588, 187);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(184, 37);
+            this.button14.TabIndex = 11;
+            this.button14.Text = "Импорт в Excel";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
             // worker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
@@ -500,5 +513,6 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button14;
     }
 }
