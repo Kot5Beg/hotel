@@ -21,7 +21,7 @@ namespace Hotel
         private void button1_Click(object sender, EventArgs e)
         {
             database.OpenCon();
-            string add = String.Format("INSERT INTO worker (Surname, Name, Patronymic, Address, Phone, Email, Date_of_birth, Gender) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + textBox6.Text + "', '" + textBox5.Text + "', '" +textBox4.Text+ "', '" + dateTimePicker1.Value.Date + "')");
+            string add = String.Format("INSERT INTO worker (Surname, Name, Patronymic, Address, Phone, Email, Date_of_birth) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + textBox6.Text + "', '" + textBox5.Text + "', '" +textBox4.Text+ "', '" + dateTimePicker1.Value.Date + "')");
             SqlCommand sc = new SqlCommand(add, database.Con);
             sc.ExecuteNonQuery();
             database.CloseConnection();

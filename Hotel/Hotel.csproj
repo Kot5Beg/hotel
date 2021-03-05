@@ -71,6 +71,12 @@
     <Compile Include="add_number.Designer.cs">
       <DependentUpon>add_number.cs</DependentUpon>
     </Compile>
+    <Compile Include="add_sett.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_sett.Designer.cs">
+      <DependentUpon>add_sett.cs</DependentUpon>
+    </Compile>
     <Compile Include="add_wish.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="add_number.resx">
       <DependentUpon>add_number.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_sett.resx">
+      <DependentUpon>add_sett.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="add_wish.resx">
       <DependentUpon>add_wish.cs</DependentUpon>

@@ -52,6 +52,11 @@ namespace Hotel
                 string type = "SELECT * FROM wish";
                 Loading(type, dataGridView4);
             }
+            else if(tabControl1.SelectedTab == tabPage1)
+            {
+                string type = "SELECT * FROM settlement";
+                Loading(type, dataGridView5);
+            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -142,7 +147,7 @@ namespace Hotel
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Вы точно хотите удалить запсиь?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            if (MessageBox.Show("Вы точно хотите удалить запись?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 database.OpenCon();
                 var num = (int)dataGridView1.CurrentRow.Cells["ID"].Value;
@@ -159,7 +164,7 @@ namespace Hotel
 
         private void button11_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Вы точно хотите удалить запсиь?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            if (MessageBox.Show("Вы точно хотите удалить запись?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 database.OpenCon();
                 var num = (int)dataGridView3.CurrentRow.Cells["ID"].Value;
@@ -175,7 +180,7 @@ namespace Hotel
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Вы точно хотите удалить запсиь?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            if (MessageBox.Show("Вы точно хотите удалить запись?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 database.OpenCon();
                 var num = (int)dataGridView4.CurrentRow.Cells["ID"].Value;
@@ -287,6 +292,35 @@ namespace Hotel
                 row.Cells[6].Value.ToString(),
                 row.Cells[7].Value.ToString());
             uw.ShowDialog();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            add_sett a = new add_sett();
+            a.Show();
+        }
+
+        private void button10_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Вы точно хотите удалить запись?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                database.OpenCon();
+                var num = (int)dataGridView5.CurrentRow.Cells["ID"].Value;
+                SqlCommand sc = new SqlCommand(String.Format("DELETE FROM settlement WHERE ID = {0}", num), database.Con);
+                sc.ExecuteNonQuery();
+                MessageBox.Show("Запись удалена");
+                database.CloseConnection();
+            }
+            else
+            {
+                MessageBox.Show("Ошибка удаления");
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            string type = "SELECT * FROM settlement";
+            Loading(type, dataGridView5);
         }
     }
 }
